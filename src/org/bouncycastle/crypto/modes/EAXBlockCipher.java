@@ -221,8 +221,6 @@ public class EAXBlockCipher implements AEADBlockCipher {
             }
             cipher.processBlock(bufBlock, 0, tmp, 0);
 
-            System.out.println(java.util.Arrays.toString(tmp));
-
             System.arraycopy(tmp, 0, out, outOff, extra);
 
             mac.update(tmp, 0, extra);
